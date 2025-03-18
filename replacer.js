@@ -2,8 +2,10 @@ chrome.storage.local.get("enabled", (data) => {
   if (!data.enabled) return;
 
   const replacements = [
-    chrome.runtime.getURL("images/replacement1.jpg"),
-    chrome.runtime.getURL("images/replacement2.jpg")
+    chrome.runtime.getURL("images/image1.jpg"),
+    chrome.runtime.getURL("images/image2.jpg"),
+    chrome.runtime.getURL("images/image3.jpg"),
+    chrome.runtime.getURL("images/image4.jpg")
   ];
 
   const imgs = document.querySelectorAll("img");
