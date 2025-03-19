@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Replacer</title>
+  <title>My Face Everywhere</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Image Replacer</h2>
-  <input type="password" id="password" placeholder="Enter password" />
-  <button id="toggle">Start/Stop</button>
-  <p id="status"></p>
+  <div id="login-view">
+    <h1>My Face Everywhere</h1>
+    <input type="password" id="password-input" placeholder="Enter password">
+    <button id="login-btn">Login</button>
+    <p class="footer">This extension was made possible with AI</p>
+  </div>
+
+  <div id="admin-view" class="hidden">
+    <h1>Admin Panel</h1>
+    <input type="file" id="image-upload" accept="image/*" multiple>
+    <div id="thumbnails"></div>
+
+    <textarea id="whitelist" placeholder="Enter whitelisted domains, one per line"></textarea>
+    <button id="run-btn">Run</button>
+    <button id="back-btn">Back</button>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
