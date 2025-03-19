@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Face Everywhere</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="login-view">
-    <h1>My Face Everywhere</h1>
-    <input type="password" id="password-input" placeholder="Enter password">
-    <button id="login-btn">Login</button>
-    <p class="footer">This extension was made possible with AI</p>
+  <h1>My Face Everywhere</h1>
+
+  <!-- Login View -->
+  <div id="loginView">
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button id="loginButton">Login</button>
   </div>
 
-  <div id="admin-view" class="hidden">
-    <h1>Admin Panel</h1>
-    <input type="file" id="image-upload" accept="image/*" multiple>
-    <div id="thumbnails"></div>
+  <!-- Admin View -->
+  <div id="adminView">
+    <h3>Admin Panel</h3>
 
-    <textarea id="whitelist" placeholder="Enter whitelisted domains, one per line"></textarea>
-    <button id="run-btn">Run</button>
-    <button id="back-btn">Back</button>
+    <label>Upload Images (Max 6):</label>
+    <input type="file" id="imageUpload" accept="image/*" multiple />
+
+    <div id="imageContainer">
+      <!-- Placeholder or uploaded images will appear here -->
+    </div>
+
+    <label>Whitelist Site:</label>
+    <input type="text" id="whitelistInput" placeholder="example.com" />
+    <button id="addWhitelist">Add</button>
+
+    <ul id="whitelistList"></ul>
+
+    <button id="runButton">Run</button>
+    <button id="backButton">Back</button>
   </div>
+
+  <div class="footer">This extension was made possible with AI</div>
 
   <script src="popup.js"></script>
 </body>
